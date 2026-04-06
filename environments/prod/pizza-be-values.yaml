@@ -1,0 +1,8 @@
+image:
+  repository: your-dockerhub/pizza-be
+  tag: "1.0.2"
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 3000

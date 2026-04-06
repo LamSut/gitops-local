@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "{{ include "pizza-fe.fullname" . }}-test-connection"
+  labels:
+    {{- include "pizza-fe.labels" . | nindent 4 }}
+  annotations:
+    "helm.sh/hook": test
+spec:
+  containers:
+    - name: wget
+      image: busybox
+      command: ['wget']
+      args: ['{{ include "pizza-fe.fullname" . }}:{{ .Values.service.port }}']
+  restartPolicy: Never

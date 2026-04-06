@@ -1,0 +1,11 @@
+image:
+  repository: your-dockerhub/pizza-fe
+  tag: "1.0.2"
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 80
+
+ingress:
+  enabled: false

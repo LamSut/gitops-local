@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: pizza-fe
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/LamSut/GitOps.git
+    targetRevision: main
+    path: charts/pizza-fe
+    helm:
+      valueFiles:
+        - ../../environments/dev/pizza-fe-values.yaml
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: pizza
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

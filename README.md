@@ -1,2 +1,1 @@
-# KIND
-# KIND
+# GitOps J4F
