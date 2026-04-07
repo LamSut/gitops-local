@@ -13,6 +13,7 @@ vendor/
 # Environment variables
 .env
 .env.*
+pizza-be-secrets.yaml
 
 # Build / Dist
 dist/
