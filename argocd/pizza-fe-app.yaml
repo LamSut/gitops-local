@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/LamSut/GitOps.git
+    repoURL: https://github.com/LamSut/gitops-local.git
     targetRevision: main
     path: charts/pizza-fe
     helm:
